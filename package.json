@@ -1,0 +1,22 @@
+{
+    "name": "social network api",
+    "version": "1.0.0",
+    "description": "fill in later",
+    "main": "app.js", 
+    "scripts": {
+      "start": "node app.js",
+      "dev": "nodemon app.js" 
+    },
+    "engines": {
+      "node": ">=14.0.0" 
+    },
+    "dependencies": {
+      "express": "^4.17.1", 
+      "mongoose": "^5.13.7" 
+      
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.15" 
+    }
+  }
+  
