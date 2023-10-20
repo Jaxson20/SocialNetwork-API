@@ -1,19 +1,22 @@
 const router = require('express').Router();
 const {
-getfriendship,
-createfriendship,
-updatefriendship,
-deletefriendship,
+  getfriendships,
+  getfriendship,
+  createfriendship,
+  updatefriendship,
+  deletefriendship,
 } = require('../controllers/friendshipController.js');
-
-//api/friendship
-router.route('/').get(getfriendships).post(createfriendship);
 
 
 router
-.route('/:friendshipId')
-.get(getfriendship)
-.put(updatefriendship)
-.delete(deletefriendship);
+  .route('/')
+  .get(getfriendships.create) 
+  .post(createfriendship.create); 
+
+router
+  .route('/:friendshipId')
+  .get(getfriendship.create) 
+  .put(updatefriendship.create) 
+  .delete(deletefriendship.create); 
 
 module.exports = router;
