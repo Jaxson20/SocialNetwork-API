@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     unique: true,
     required: true,
-    match: [/.+@.+\..+/, 'Please enter a valid email address'], //IDK if the regrex is supposed to look like that
+    match: [/.+@.+\..+/, 'Please enter a valid email address'], 
   },
   thoughts: [
     {

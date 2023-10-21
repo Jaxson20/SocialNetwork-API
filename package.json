@@ -2,10 +2,11 @@
     "name": "social-network-api",
     "version": "1.0.0",
     "description": "fill in later",
-    "main": "app.js", 
+    "main": "server.js", 
     "scripts": {
-      "start": "node app.js",
-      "dev": "nodemon app.js" 
+      "start": "node server.js",
+      "dev": "nodemon app.js",
+      "seed": "node seed.js" 
     },
     "engines": {
       "node": ">=14.0.0" 
