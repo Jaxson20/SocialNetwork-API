@@ -1,13 +1,10 @@
-const mongoose = require('mongoose');
+const { connect, connection } = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/MyDb', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
-const db = mongoose.connection;
+const connectionString =
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/MyDb';
 
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB database');
-});
+
+connect(connectionString);
+
+module.exports = connection;

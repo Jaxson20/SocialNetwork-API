@@ -1,3 +1,4 @@
+const connection = require('../config/connection.js');
 const { Schema, Types } = require('mongoose'); 
 const reactionSchema = new Schema({
     reactionId: {
